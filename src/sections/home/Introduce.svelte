@@ -1,11 +1,46 @@
-<script>
+<script lang="ts">
+  import { onMount, onDestroy } from 'svelte'
+  import { gsap } from 'gsap'
+
   import IntroduceSection from '~/components/IntroduceSection.svelte'
   import IntroduceSectionItem from '~/components/IntroduceSectionItem.svelte'
+
+  let title: HTMLDivElement
+
+  const tweens: gsap.core.Tween[] = []
+
+  onMount(() => {
+    tweens.push(
+      gsap.fromTo(
+        title,
+        {
+          opacity: 0,
+          y: 24
+        },
+        {
+          opacity: 1,
+          duration: 1,
+          y: 0,
+          scrollTrigger: {
+            scroller: window.simplebar.getScrollElement(),
+            trigger: title,
+            start: 'center center',
+            scrub: false
+          }
+        }
+      )
+    )
+  })
+
+  onDestroy(() => {
+    tweens.forEach((x) => x.targets().forEach((y) => x.kill(y as object)))
+  })
 </script>
 
-<div class="min-h-screen w-screen pt-36 px-6 pb-12" id="main-section__introduce">
+<div class="min-h-screen w-screen pt-48 px-6 pb-12" id="main-section__introduce">
   <div class="max-w-[1400px] w-full mx-auto">
     <div
+      bind:this={title}
       class="text-4xl lg:text-6xl lg:font-bold font-medium border-b inline-block pr-8 pb-2 border-white"
     >
       Introduce
