@@ -55,16 +55,16 @@
         </IntroduceSectionItem>
       </IntroduceSection>
       <IntroduceSection title="EDUCATION">
-        <IntroduceSectionItem title="ELEMENTARY SCHOOL" year="2020">
+        <IntroduceSectionItem title="ELEMENTARY SCHOOL" year="2013">
           <div>Chungmyoung Elementary School</div>
           <div>Haneulbit Elementary School</div>
           <div>Byeolgaram Elementary School</div>
         </IntroduceSectionItem>
-        <IntroduceSectionItem title="MIDDLE SCHOOL" year="2020">
+        <IntroduceSectionItem title="MIDDLE SCHOOL" year="2019">
           <div>Byeolgaram Middle School</div>
           <div>Seokgwean Middle School</div>
         </IntroduceSectionItem>
-        <IntroduceSectionItem title="HIGH SCHOOL" year="2020">
+        <IntroduceSectionItem title="HIGH SCHOOL" year="2022">
           <div>Kyunghee High School</div>
         </IntroduceSectionItem>
       </IntroduceSection>

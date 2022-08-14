@@ -11,7 +11,6 @@
   const tweens: gsap.core.Tween[] = []
 
   onMount(() => {
-    console.log(itemsElem.children)
     tweens.push(
       gsap.fromTo(
         titleElem,
